@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <canvas id="html_canvas" width="400" height="200" style="border:1px solid black;">
+        "Notify: Canvas not supported by your Browser"
+    </canvas>
+
+</body>
+<script>
+    var c = document.getElementById("html_canvas");	//get canvas instance from DOM object
+    var ctx = c.getContext("2d");			//call getContext function on instance	
+    ctx.moveTo(0, 0);				//setting start point of line
+    ctx.lineTo(200, 100);				//setting end point of line	
+    ctx.stroke();					//call stroke function to build image
+
+    // making of an envelope
+    ctx.moveTo(200, 100);
+    ctx.lineTo(400, 0);
+    ctx.stroke();
+
+    ctx.font = "25px Arial";
+    ctx.strokeText("Hello World! Guess whats inside ?", 16, 140); //strokeText(content,x-origin,y-origin)
+
+</script>
+
+</html>
