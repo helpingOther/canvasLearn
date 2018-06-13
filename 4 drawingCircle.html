@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <canvas id="html_canvas" width="400" height="200" style="border:1px solid black;">
+        "Notify: Canvas not supported by your Browser"
+    </canvas>
+
+</body>
+<script>
+    var c = document.getElementById("html_canvas");
+    var ctx = c.getContext("2d");
+    ctx.beginPath();
+    ctx.arc(95, 50, 40, 0, 2 * Math.PI);		//function to draw circular shapes arc(x-origin,y-origin,radius,sAngle,eAngle,counterclockwise);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(295, 50, 40, 0, 2 * Math.PI);
+    ctx.stroke();
+    //giving it a nose
+    ctx.moveTo(195, 10);
+    ctx.lineTo(195, 150);
+    ctx.stroke();
+    ////giving it a smile (semi arc)
+    ctx.beginPath();
+    ctx.arc(200, 0, 200, 0, 2 * Math.PI);
+    ctx.stroke();
+</script>
+
+</html>
