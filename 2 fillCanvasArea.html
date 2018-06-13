@@ -15,7 +15,7 @@
     var canvas = document.getElementById("html_canvas");
     var ctx = canvas.getContext("2d");
     ctx.fillStyle = "lightGreen";
-    ctx.fillRect(0, 0, 100, 50);
+    ctx.fillRect(0, 0, 100, 50);        //fillRect(x,y,width,height) 
     ctx.fillRect(200, 0, 100, 50);
     ctx.fillRect(100, 50, 100, 50);
     ctx.fillRect(300, 50, 100, 50);
@@ -26,24 +26,24 @@
 
     //doing it visualizing it
     ctx.fillStyle = "black";
-	let x	=	0;let y =	0;
-	for(let i=1;i<=8;i++){
-		(function(x,y){
-			setTimeout(function(){
-			ctx.fillRect(x*100, y, 100, 50);
-		},i*1000)
-		})(x,y);
-		if(x!=2 && x!=3){
-            x+=2;
-		}
-		else if(x==2){
-			x=1;
-			y+=50;
-		}
-		else if(x==3){
-			x=0;
-			y+=50;
-		}
-	}
+    let x = 0; let y = 0;
+    for (let i = 1; i <= 8; i++) {
+        (function (x, y) {
+            setTimeout(function () {
+                ctx.fillRect(x * 100, y, 100, 50);
+            }, i * 1000)
+        })(x, y);
+        if (x != 2 && x != 3) {
+            x += 2;
+        }
+        else if (x == 2) {
+            x = 1;
+            y += 50;
+        }
+        else if (x == 3) {
+            x = 0;
+            y += 50;
+        }
+    }
 
 </script>
